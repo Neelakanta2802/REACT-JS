@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 function Dashboard(){
     const nav = useNavigate();
-    function handleMen(){
-        nav("/dashboard");
+    function handleLogin(){
+        nav("/");
     }
     return (
         <>
         <p>Welcome to Zerodha</p>
-        <button onClick={handleMen}>Go to Dashboard</button>
+        <button onClick={handleLogin}>Go to LOGIN</button>
         </>
     );
 }
