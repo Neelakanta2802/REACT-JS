@@ -1,12 +1,23 @@
 import React from "react";
 import { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
+
 function Login() {
     const nav = useNavigate();
-   const[userName,setuserName] = useState("");
-    const[password,setpassword] = useState("");
+
+
+    const [userName, setuserName] = useState("");
+    const [password, setpassword] = useState("");
+    const data = {
+        userName ,
+        password
+    }
     function handleLogin() {
-    
+        const response = axios.post('https://devgnan.com', data)
+        console.log(response);
+
         if (userName === "NANI" && password === "pass123") {
             nav("/dashboard");
             <p>JaiBabu</p>
@@ -31,7 +42,7 @@ function Login() {
                     onChange={(e) => setpassword(e.target.value)}
                 />
                 <button onClick={handleLogin}>Login</button>
-            
+
             </div>
             {userName}
             {password}
