@@ -11,11 +11,12 @@ function Login() {
     const [userName, setuserName] = useState("");
     const [password, setpassword] = useState("");
     const data = {
-        userName ,
+        userName,
         password
     }
+    
     function handleLogin() {
-        const response = axios.post('https://devgnan.com', data)
+        const response = axios.post('https://amazon.com', data)
         console.log(response);
 
         if (userName === "NANI" && password === "pass123") {

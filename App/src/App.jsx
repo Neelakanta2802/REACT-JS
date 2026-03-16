@@ -6,6 +6,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import Login from "./Components/Login/Login";
+import RestaurentList from "./Components/RestaurentList/RestaurentList";
 
 function App() {
   const [username, setUsername] = useState('');
@@ -19,12 +20,11 @@ function App() {
   
   
   return (
-    <>
-    <Routes>
-      <Route path="/" element={ < Login/>} />
-      <Route path="/dashboard" element={<Dashboard/>} />
-    
-    </Routes>
+    <> 
+    <div>
+      < RestaurentList/>
+    </div>
+     
     </>
   );
 }
