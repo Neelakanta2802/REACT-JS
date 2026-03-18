@@ -7,6 +7,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Login from "./Components/Login/Login";
 import RestaurentList from "./Components/RestaurentList/RestaurentList";
+import Home from "./Components/Home/Home";
 
 function App() {
   const [username, setUsername] = useState('');
@@ -22,6 +23,8 @@ function App() {
   return (
     <> 
     <div>
+    < Login/>
+    < Home/>
       < RestaurentList/>
     </div>
      
