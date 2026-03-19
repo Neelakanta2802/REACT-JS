@@ -2,12 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 function Home() {
     const navigation = useNavigate();
-    useEffect(() => {
-        const token = localStorage.getItem('token');
-            if (!token) {
-                navigation("/login")
-            }
-            },[]);
 
      const handleLogout = ()=>  {
         localStorage.removeItem("token");
@@ -23,6 +17,7 @@ function Home() {
 return (
     <>
         <div>
+            <p>Jai babu</p>
             <button onClick={handleLogout}>Logout</button>
         </div>
 
