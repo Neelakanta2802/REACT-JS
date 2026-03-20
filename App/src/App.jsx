@@ -9,6 +9,8 @@ import axios from "axios";
 import Login from "./Components/Login/Login";
 import RestaurentList from "./Components/RestaurentList/RestaurentList";
 import Home from "./Components/Home/Home";
+import PromiseDemo from "./Components/PromiseDemo/PromiseDemo";
+
 
 function App() {
 
@@ -19,6 +21,7 @@ function App() {
     <>
     
       <BrowserRouter>
+      < PromiseDemo/>
         <Routes>
           <Route path="/login" element={< Login />} />
          <Route path="/home" element={
